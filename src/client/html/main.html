@@ -219,6 +219,14 @@
     }
 
     function setGameMode(tag) {
+      ////////////////////////
+      //SINGLE mode is under construction due to the color bug
+      //SINGLE mode run fine with the version of core without color
+      if(tag=="SINGLE"){
+        tag="FFA";
+        alert("SINGLE mode is under construction due to a bug");
+      }
+      //////////////////////////
       window.ggluser.gameMode = tag;
       if (window.ggluser.gameMode == "FFA") {
         document.getElementById("FFA").style.backgroundColor = `hsl(166,100%,40%)`;
